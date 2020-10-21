@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "jyr <faner4567@gmail.com>",
   "license": "MIT",
+
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec babel-node src/app.js"
   },
