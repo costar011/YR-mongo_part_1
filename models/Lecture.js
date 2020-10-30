@@ -14,7 +14,7 @@ const Lecture = new Schema(
       required: true,
     },
     time: {
-      type: Int32Array,
+      type: Number,
       required: true,
     },
     grade: {
@@ -29,5 +29,5 @@ const Lecture = new Schema(
   { versionKey: false }
 );
 
-export default monogoose.model(`Lecture`, lecture, `Lecture`);
+export default monogoose.model(`Lecture`, Lecture, `Lecture`);
 // Lecture 라는 이름으로 Lecture으로 사용한다 DB에 있는 Lecture를.
