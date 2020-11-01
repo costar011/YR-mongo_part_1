@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 
 const connect = () => {
   if (process.env.NODE_ENV !== `production`) {
-    mongoose.set("debug", true); // debug모드로 실행된다.
+    mongoose.set("debug", true);
   }
 
   mongoose.connect(
@@ -12,7 +12,6 @@ const connect = () => {
       dbName: process.env.DB_NAME,
       useNewUrlParser: true,
       useCreateIndex: true,
-      // `` <-- 첫번째 파라미터 연결 주소
     },
     (error) => {
       if (error) {
