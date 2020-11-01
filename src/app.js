@@ -7,6 +7,8 @@ dotenv.config();
 
 const app = express();
 
+connect();
+
 app.set(`PORT`, process.env.PORT);
 
 app.get("/", async (req, res) => {
