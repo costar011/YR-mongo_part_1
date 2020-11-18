@@ -1,6 +1,6 @@
-import express from "express";
-import dotenv from "dotenv";
-import connect from "../db/mongo";
+import express from "express"; // express framework를 사용하기 위해 import함
+import dotenv from "dotenv"; // dotenv를 쓰기 위해 import함
+import connect from "../db/mongo"; // connect를 사용하기 위해 db폴더 안 mongo에서 import함
 import Lecture from "../models/Lecture";
 
 dotenv.config();
@@ -12,12 +12,7 @@ connect();
 app.set(`PORT`, process.env.PORT);
 
 app.get("/", async (req, res) => {
-  const result = await Lecture.find(
-    {
-      grade: { $gte: 1 },
-    },
-    {}
-  );
+  const result = await Lecture.find({}, {});
   res.send(result);
 });
 
